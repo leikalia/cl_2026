@@ -1,6 +1,4 @@
-from typing import List, Union
 import re
-
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -63,4 +61,5 @@ def get_embeddings(chunks: List[str], model_name: str = MODEL_NAME, normalize: b
 def cos_compare(v: np.ndarray, w: np.ndarray) -> float:
     v = np.asarray(v).reshape(1, -1)
     w = np.asarray(w).reshape(1, -1)
+
     return float(cosine_similarity(v, w)[0][0])
