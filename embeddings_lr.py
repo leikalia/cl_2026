@@ -1,3 +1,4 @@
+from typing import Union, List
 import re
 import numpy as np
 from sentence_transformers import SentenceTransformer
